@@ -56,5 +56,7 @@ The file structure of each Plug-in's source code:
 ```
 
 
-# Ignore files
-Always ignore  *.zip file
+<br/>
+<br/>
+
+![](readme-images/index.png)
