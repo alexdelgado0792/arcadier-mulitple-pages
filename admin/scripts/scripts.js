@@ -32,6 +32,32 @@ function MainFunction() {
 MainFunction.prototype.MethodName = function () {
 }
 
+MainFunction.prototype.ApiCallMethodName = function (adminId, adminToken, data) {
+    var deferred = $.Deferred();
+
+    $.ajax({
+        "url": `https://${window.location.host}/api/v2/admins/${adminId}/custom-field-values?referenceTable=Users&pageSize=&pageNumber`,
+        "method": "POST",
+        "timeout": 0,
+        "headers": {
+            "Authorization": `Bearer ${adminToken}`,
+            "Content-Type": "application/json"
+        },
+        "data": JSON.stringify(data),
+        success: function (response) {
+            deferred.resolve(response);
+        },
+        fail: function (response, status) {
+            deferred.reject(response);
+        },
+        error: function (response, status) {
+            deferred.reject(response);
+        }
+    });
+
+    return deferred.promise();
+}
+
 var script_object = undefined;
 $(document).ready(() => {
     script_object = new MainFunction();
