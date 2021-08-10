@@ -1,5 +1,5 @@
-# PROJECT_PREFIX - PLUGIN NAME
-Some description for the plugin.
+# ADC - MULTIPLE PAGES IN ADMIN SIDE
+Plugin example in how to have mutiples pages in the admin side of the marketplace.
 
 # File structure
 The file structure of each Plug-in's source code:
